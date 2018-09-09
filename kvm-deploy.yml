@@ -11,13 +11,11 @@
   - name: Install kvm, python libs, libs, supervisor, nginx
     yum: pkg={{item}} state=installed
     with_items:
-      - epel-release
       - qemu-kvm
       - git
       - libvirt
       - virt-manager
       - bridge-utils
-      - python-pip 
       - libvirt-python
       - libxml2-python
       - python-websockify
