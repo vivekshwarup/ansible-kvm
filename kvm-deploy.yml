@@ -11,7 +11,11 @@
   - name: Install kvm, python libs, libs, supervisor, nginx
     yum: pkg={{item}} state=installed
     with_items:
-      - ntp
+      - qemu-kvm
+      - libvirt 
+      - libvirt-python 
+      - libguestfs-tools 
+      - virt-install
    
   - name: enable and start libvirt
     service: name=libvirtd state=restarted enabled=yes
