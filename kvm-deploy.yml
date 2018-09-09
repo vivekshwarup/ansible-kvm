@@ -17,7 +17,6 @@
       - bridge-utils
       - libvirt-python
       - libxml2-python
-      - python-websockify
       - supervisor
       - nginx
       - net-tools
