@@ -1,5 +1,5 @@
 ---
-- hosts: kvm
+- hosts: all
   vars:
     app_path: /var/www/webvirtmgr  
 
