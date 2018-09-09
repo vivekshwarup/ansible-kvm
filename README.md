@@ -9,10 +9,10 @@ Getting started with this playbook, you should edit the hosts to match your host
 Installation
 To install KVM on Centos7 with this playbook:
 
-git clone https://github.com/ryanhartje/ansible-kvm.git
+git clone https://github.com/vivekshwarup/ansible-kvm.git
 cd ansible-kvm
-vim deploy.yml # edit hosts
-ansible-playbook deploy.yml
+vim kvm-deploy.yml # edit hosts
+ansible-playbook kvm-deploy.yml
 Post Installation
 Currently, this project is missing automated steps for TCP authentication, as well as the login user.
 
