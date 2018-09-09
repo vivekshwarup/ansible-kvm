@@ -12,7 +12,6 @@
     yum: pkg={{item}} state=installed
     with_items:
       - qemu-kvm
-      - git
       - libvirt
       - virt-manager
       - bridge-utils
