@@ -12,10 +12,10 @@ Should you wish to move the app_path for WebVirtMgr, you may do so by changing t
 ### Installation
 To install KVM on Centos7 with this playbook:
 ```ssh
-git clone https://github.com/ryanhartje/ansible-kvm.git
+git clone https://github.com/vivekshwarup/ansible-kvm.git
 cd ansible-kvm
-vim deploy.yml # edit hosts
-ansible-playbook deploy.yml
+vim kvm-deploy.yml # edit hosts
+ansible-playbook kvm-deploy.yml
 ```
 
 ### Post Installation
