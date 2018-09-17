@@ -6,7 +6,7 @@
   tasks:
 
   - name: yum update
-    yum: name=* state=latest update_cache=yes
+    yum: name=* state=latest update_cache=no
 
   - name: Install kvm, python libs, libs, supervisor, nginx
     yum: pkg={{item}} state=installed
