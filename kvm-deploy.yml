@@ -12,10 +12,14 @@
     yum: pkg={{item}} state=installed
     with_items:
       - qemu-kvm
+      - qemu-img
+      - virt-manager
       - libvirt 
       - libvirt-python 
-      - libguestfs-tools 
+      - libvirt-client
+      - virt-viewer 
       - virt-install
+      - bridge-utils
    
   - name: enable and start libvirt
     service: name=libvirtd state=restarted enabled=yes
@@ -94,6 +98,6 @@
    
   handlers:
     - name: add_admin
-      django_manage: app_path="{{ app_path }}" command="createsuperuser --noinput --username=admin --email=my@email.com password=testtest"
+      django_manage: app_path="{{ app_path }}" command="createsuperuser --noinput --username=admin --email=vivek@kernelsphere.com password=Kernel123#"
 
 
