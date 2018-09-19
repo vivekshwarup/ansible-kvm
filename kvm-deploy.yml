@@ -38,7 +38,7 @@
     file: name=/var/www state=directory
  
   - name: clone webvirtmgr
-    git: repo=git://github.com/retspen/webvirtmgr.git
+    git: repo=https://github.com/retspen/webvirtmgr.git
          dest={{ app_path }}
          accept_hostkey=yes
 
