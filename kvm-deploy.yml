@@ -8,13 +8,12 @@
   - name: yum update
     yum: name=* state=latest update_cache=yes
 
-  - name: Install git epel-release pip pip2 nginx open-vm-tools qemu-kvm qemu-img virt-manager libvirt libvirt-python libvirt-client virt-install virt-viewer bridge-utils
+  - name: Install git epel-release python-pip nginx open-vm-tools qemu-kvm qemu-img virt-manager libvirt libvirt-python libvirt-client virt-install virt-viewer bridge-utils
     yum: pkg={{item}} state=installed
     with_items:
       - git
       - epel-release
-      - pip
-      - pip2
+      - python-pip
       - nginx
       - open-vm-tools
       - qemu-kvm
