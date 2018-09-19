@@ -1,7 +1,7 @@
 ---
 - hosts: all
   vars:
-    app_path: /var/www/webvirtcloud
+    app_path: /var/www/webvirtmgr
 
   tasks:
 
@@ -41,8 +41,8 @@
   - name: check for web folder
     file: name=/var/www state=directory
  
-  - name: clone webvirtcloud
-    git: repo=https://github.com/retspen/webvirtcloud.git
+  - name: clone webvirtmgr
+    git: repo=git://github.com/retspen/webvirtmgr.git
          dest={{ app_path }}
          accept_hostkey=yes
 
