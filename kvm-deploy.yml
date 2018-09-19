@@ -1,7 +1,7 @@
 ---
 - hosts: all
   vars:
-    app_path: /var/www/webvirtmgr  
+    app_path: /var/www/webvirtcloud
 
   tasks:
 
@@ -39,7 +39,7 @@
   - name: check for web folder
     file: name=/var/www state=directory
  
-  - name: clone webvirtmgr
+  - name: clone webvirtcloud
     git: repo=https://github.com/retspen/webvirtcloud.git
          dest={{ app_path }}
          accept_hostkey=yes
@@ -47,7 +47,7 @@
   - name: set perms 
     file: path="{{ app_path }}" owner=nginx group=nginx recurse=yes
  
-  - name: pip install webvirtmgr libs
+  - name: pip install webvirtcloud libs
     pip: requirements={{ app_path }}/requirements.txt
     notify: add_admin
 
