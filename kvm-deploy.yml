@@ -48,7 +48,7 @@
     file: path="{{ app_path }}" owner=nginx group=nginx recurse=yes
  
   - name: pip install webvirtcloud libs
-    pip: requirements={{ app_path }}/requirements.txt
+    pip: requirements={{ app_path }}/conf/requirements.txt
     notify: add_admin
 
   # This is a django project
