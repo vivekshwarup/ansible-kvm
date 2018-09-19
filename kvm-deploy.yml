@@ -11,6 +11,7 @@
   - name: Install git open-vm-tools qemu-kvm qemu-img virt-manager libvirt libvirt-python libvirt-client virt-install virt-viewer bridge-utils
     yum: pkg={{item}} state=installed
     with_items:
+      - git
       - open-vm-tools
       - qemu-kvm
       - qemu-img
