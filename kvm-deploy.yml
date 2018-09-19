@@ -71,7 +71,10 @@
   # http://docs.ansible.com/ansible/firewalld_module.html
   - name: open 80
     firewalld: port=80/tcp permanent=true state=enabled immediate=yes
-
+  
+  - name open 8000
+    firewalld: port=8000/tcp permanent=true state=enabled immediate=yes
+    
   - name: supervisor conf
     template: src=templates/supervisord.conf.j2 dest=/etc/supervisord.conf
 
