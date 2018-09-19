@@ -12,6 +12,7 @@
     yum: pkg={{item}} state=installed
     with_items:
       - git
+      - nginx
       - open-vm-tools
       - qemu-kvm
       - qemu-img
@@ -22,7 +23,6 @@
       - virt-viewer 
       - virt-install
       - bridge-utils
-      - nginx
    
   - name: enable and start libvirt
     service: name=libvirtd state=restarted enabled=yes
